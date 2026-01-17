@@ -9,6 +9,8 @@ process.on("unhandledRejection", (e) => {
 
 import express from "express";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 import "./migrate.js";
 
 import { productsRouter } from "./routes.products.js";
@@ -18,9 +20,18 @@ import { deliveryRouter } from "./routes.delivery.js";
 
 const app = express();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+
+// 🔥 ВОТ КЛЮЧЕВОЕ МЕСТО
+app.use(express.static(path.join(__dirname, "..", "public")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+});
 
 app.get("/health", (_, res) => res.json({ ok: true }));
 
@@ -31,4 +42,3 @@ app.use("/d", deliveryRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log("server on", port));
-
