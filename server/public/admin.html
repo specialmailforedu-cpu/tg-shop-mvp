@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Админка</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <div class="h1">Админка заказов</div>
+        <div class="sub">Введи ADMIN_KEY и управляй заказами</div>
+      </div>
+    </header>
+
+    <div class="bar">
+      <input id="adminKey" class="input" placeholder="ADMIN_KEY" />
+      <select id="status" class="input" style="max-width:240px">
+        <option value="WAITING_PAYMENT">WAITING_PAYMENT</option>
+        <option value="PAID">PAID</option>
+        <option value="DELIVERED">DELIVERED</option>
+      </select>
+      <button id="load" class="btn">Загрузить</button>
+    </div>
+
+    <div id="list" class="cartItems"></div>
+
+    <div class="note">
+      <b>Безопасность:</b> не отправляй логин/пароль в чат. Выдавай через одноразовую ссылку.
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
