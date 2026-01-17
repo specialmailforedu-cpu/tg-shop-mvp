@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Магазин</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <div class="h1">Магазин игр</div>
+        <div class="sub">Аккаунты с игрой • Быстро • Выгодно</div>
+      </div>
+      <button id="cartBtn" class="btn">Корзина (<span id="cartCount">0</span>)</button>
+    </header>
+
+    <div class="bar">
+      <input id="search" class="input" placeholder="Поиск игры..." />
+      <button id="reload" class="btn2">Обновить</button>
+    </div>
+
+    <main>
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <div id="drawer" class="drawer hidden">
+      <div class="drawerHead">
+        <div class="h2">Корзина</div>
+        <button id="closeDrawer" class="btn2">Закрыть</button>
+      </div>
+
+      <div id="cartItems" class="cartItems"></div>
+
+      <div class="cartFooter">
+        <div class="sum">Итого: <b><span id="total">0</span> ₽</b></div>
+        <button id="checkout" class="btn">Оформить</button>
+      </div>
+
+      <div id="checkoutResult" class="note"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
