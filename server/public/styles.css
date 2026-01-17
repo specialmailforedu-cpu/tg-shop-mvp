@@ -1,0 +1,30 @@
+:root { --bg:#0b0f14; --card:#121926; --txt:#e8eef7; --mut:#9bb0c6; }
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+body{margin:0;background:var(--bg);color:var(--txt);}
+.wrap{max-width:980px;margin:0 auto;padding:14px;}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
+.h1{font-size:20px;font-weight:800;}
+.sub{font-size:12px;color:var(--mut);}
+.bar{display:flex;gap:10px;margin:10px 0 14px;}
+.input{flex:1;padding:12px 12px;border-radius:12px;border:1px solid #233145;background:#0f1622;color:var(--txt);}
+.btn{padding:12px 14px;border:0;border-radius:12px;background:#2b74ff;color:white;font-weight:700;cursor:pointer;}
+.btn2{padding:12px 14px;border:1px solid #233145;border-radius:12px;background:#0f1622;color:var(--txt);cursor:pointer;}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+@media (min-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+.card{background:var(--card);border:1px solid #1f2a3a;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px;}
+.title{font-weight:800;}
+.meta{font-size:12px;color:var(--mut);display:flex;justify-content:space-between;}
+.price{font-size:16px;font-weight:900;}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:6px;}
+.drawer{position:fixed;left:0;right:0;bottom:0;background:#0f1622;border-top:1px solid #233145;max-height:75vh;overflow:auto;padding:14px;}
+.drawerHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.h2{font-size:16px;font-weight:800;}
+.hidden{display:none;}
+.cartItems{display:flex;flex-direction:column;gap:10px;}
+.cartItem{background:var(--card);border:1px solid #1f2a3a;border-radius:14px;padding:10px;display:flex;justify-content:space-between;gap:10px;}
+.cartFooter{position:sticky;bottom:0;background:#0f1622;padding:12px 0;border-top:1px solid #233145;margin-top:12px;}
+.sum{margin-bottom:10px;}
+.note{margin-top:10px;color:var(--mut);font-size:12px;white-space:pre-wrap;}
+.small{font-size:12px;color:var(--mut);}
+.qty{display:flex;gap:6px;align-items:center;}
+.qbtn{width:30px;height:30px;border-radius:10px;border:1px solid #233145;background:#0f1622;color:var(--txt);cursor:pointer;}
